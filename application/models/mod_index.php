@@ -90,4 +90,22 @@ class mod_index extends CI_Model
         }
         return $id;
     }
+
+    public function login($user, $pass, $ip)
+    {
+        $map = array('username'=>$user,'password'=>md5($pass));
+        $query = $this->db->where($map)->get('user');
+        if($query->num_rows()>0) {
+            $row = $query->row();
+            $this->db->login_time = time();
+            $this->db->login_ip   = ip2long($ip);
+            $logincount = $row->logincount+1;
+            $data = array('login_time'=> time(),'login_ip' => ip2long($ip),'logincount' => $logincount );
+            $this->db->where(array('account_id'=>$row->account_id))->update('user', $data);
+            return $row;
+        } else {
+            return false;
+        }
+    }
+
 }

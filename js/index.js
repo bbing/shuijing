@@ -120,6 +120,9 @@ index.prototype.listen = function() {
         proWin.window('close');
     })
     $("#proWin-save").click(this.savePro);
+    $("#logOut").click(function(){
+        window.location.href = _prefix + '/index/logout';
+    })
     this.upload();
 }
 index.prototype.upload = function () {

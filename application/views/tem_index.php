@@ -10,11 +10,12 @@
 </head>
 <body  class="easyui-layout">
 <div data-options="region:'north',border:false" style="height:60px;padding-left:10px"><h1>水晶100商品后台</h1></div>
-<div data-options="region:'west',split:true,title:'菜单栏'" style="width:250px;">
+<div data-options="region:'west',split:true,title:'菜单栏'" style="width:280px;">
     <div style="border:1px solid #ddd">
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" id="addCate">新增</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" id="editCate">修改</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cut" plain="true" id="delCate">删除</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-back" plain="true" id="logOut">退出</a>
     </div>
     <ul id="cate-tree"></ul>
 </div>
@@ -47,7 +48,7 @@
         <a href="javascript:void(0)"  class="easyui-linkbutton" id="cateWin-cancel" icon="icon-cancel">取消</a>
     </div>
 </div>
-<div id="pro-window" title="商品" style="width:400px;height:280px;">
+<div id="pro-window" title="商品" style="width:450px;height:280px;">
     <div style="padding:20px 20px 20px 80px;">
         <form method="post" >
             <table>
